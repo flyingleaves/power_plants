@@ -1,0 +1,113 @@
+data_notes.txt
+
+From EIA form 860 
+1990 - 2013
+http://www.eia.gov/electricity/data/eia860/
+
+From the 1994 Annual Energy Outlook document, produced by EIA.
+ 
+“Life extension is achieved by maintaining or improving the operating status of an electric power plant within acceptable levels of availability and efficiency, beyond the originally anticipated retirement date.”
+ 
+“Repowering is achieved by investments made in a plant to substantially increase the plant's generating capability, to change generating fuels, or to install a more efficient generating technology at the plant site.”
+
+questions?
+
+OP	Operating - in service (commercial operation) and producing some electricity. Includes peaking units that are run on an as needed (intermittent or seasonal) basis.
+SB	Standby/Backup - available for service but not normally used (has little or no generation during the year) for this reporting period.
+OS	Out of service – was not used for some or all of the reporting period and is NOT expected to be returned to service in the next calendar year.
+OA	Out of service – was not used for some or all of the reporting period but is expected to be returned to service in the next calendar year.
+RE	Retired - no longer in service and not expected to be returned to service.
+
+The data items of interest are in columns AW-BD in the spreadsheet.
+ 
+puscap – planned uprate summer capacity
+puwcap – planned uprate winter capacity
+pumn   - planned uprate month
+puyr   - planned uprate year
+ 
+pdscap – planned derate summer capacity
+pdwcap – planned derate winter capacity
+pdmn   - planned derate month
+pdyr   - planned derate year
+ 
+Notice that, of a total of approximately 454 thousand records, only a couple thousand have data for uprates.  Only 500ish have planned derates.
+
+	Description
+year
+
+
+omod 	Other modification	
+uname	Utility name
+pname	Plant name
+ucode	utility code
+own		ownership status (J=joint, S=single)
+pcode	plant code
+gcode	generator code
+nerc	nerc region
+iso		independent system operator
+node	node within iso
+naics	North American Industry Classification System (NAICS) code that best describes the primary purpose of the reporting plant
+regst	regulatory status
+fcogen	Indicates of whether the plant has FERC qualifying facility cogenerator status
+fsmall	Indicates of whether the plant has FERC qualifying facility small power producer status
+fewg	Indicates of whether the plant has FERC qualifying facility exempt wholesale generator status
+state	state in which plant is located
+zip	zip (postal) code
+county	county in which plant is located
+sect	Plant-level sector number, designated by the primary purpose, regulatory status and plant-level combined heat and power status
+pm	prime mover, e.g., steam turbine, gas turbine, internal combustion engine, etc.
+status	status of generator
+nplate	nameplate capacity of generator
+scap	summer capacity rating of generator (MW = megawatts)
+wcap	winter capacity rating of generator (MW = megawatts)
+hr860	plant heat rate (efficiency measure) as reported in EIA860
+fswitch1	fuel switching capability
+multi	
+dpgrid	
+inmn	in-service month
+inyr	in-service year
+rtmn	retirement month
+rtyr	retirement year
+
+prtmn	planned retirement month
+prtyr	planned retirement year
+efmn	The original effective month on which the generator was scheduled to start operation
+
+efyr	The original effective year on which the generator was scheduled to start operation
+
+cumn	The most recently updated effective month on which the generator is scheduled to start operation
+
+cuyr	The most recently updated effective year on which the generator is scheduled to start operation
+
+nrg1-6	fuel type 1-6
+
+mfuel	
+own	ownership status (J=joint, S=single)
+numwind	
+
+pmod	planned modifications
+puscap	planned uprate summer capacity
+puwcap	planned uprate winter capacity
+pumn	planned uprate month
+puyr	planned uprate year
+pdscap	planned derate summer capacity
+pdwcap	planned derate winter capacity
+pdmn	planned derate month
+pdyr	planned derate year
+pnewpm	planned new prime mover
+pnrg1-6	planned fuel type 1-6
+pstatus	planned status
+prpmn	planned repower month
+prpyr	planned repower year
+pfcmn	
+pfcyr	
+
+omod	other modifications
+omodmn	other mod month
+omodyr	other mod year
+
+sfg		Is generator part of a solid fuel gasifications system 
+pulcoal	Indicates whether the generator uses pulverized coal technology
+
+fbed	Indicates whether the generator uses fluidized bed technology
+	

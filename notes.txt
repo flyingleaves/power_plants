@@ -1,0 +1,26 @@
+notes.txt
+
+Looks like I want to use nplate to see if they actually did upgrade the plant
+
+Upgrading of technology - as a byproduct increase capacity
+-scap seems to 
+
+Are these environmental 
+sfg: solid fuel gasifications
+fbed: flued bed technology
+
+Trade-off between higher capacity/efficiency and environmental effectiveness. 
+
+
+
+1.)One idea - use google searches/twitter with keywords "climate" etc to signify uncertainty about regulation - see if that has an affect on coal power plants and upgrades - especially decision to expand or shut-down (see note 3). 
+-could be a type of poisson regression (events per time period)  
+
+2.) What about local factors and political uncertainty: can we look at swing counties and see how elections that swung one direction or the other (republican or democrat) and how that affected power plant investments, upgrades, etc. 
+
+3.) Survival model of plant shutdowns - and various risk factors in place for this. (Sort of like my wind turbine study.) Also possible to expand this to re-starts (any of these).
+
+4.)Combination of 2 and 3 - look at neighboring states/counties with power plants near border and in same electricity market (pjm?) but with different state regulations. Could do diff-in-diff type identification strategy. 
+
+5.)"Beyond Coal" campaign - Sierra Club, Bloomberg, and Natural Gas producers. Adds uncertainty. Are they active in some states
+

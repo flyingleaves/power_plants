@@ -1,0 +1,709 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sd",
+				"sd_prod_index"
+			],
+			[
+				"sd_",
+				"sd_months_operation"
+			],
+			[
+				"mean_",
+				"mean_months_operation"
+			],
+			[
+				"gamm_mc",
+				"gamm_mc_0"
+			],
+			[
+				"peak",
+				"peak_to_end"
+			],
+			[
+				"time_to",
+				"time_to_peak_cu"
+			],
+			[
+				"gam_price_invest",
+				"gam_price_invest_over"
+			],
+			[
+				"lar",
+				"large_field"
+			],
+			[
+				"border-bottom-",
+				"border-bottom-width"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"SED",
+				"SEDataZ"
+			],
+			[
+				"SEprice",
+				"SEPrice_work_tplus1"
+			],
+			[
+				"oil",
+				"oil_price_real_l6"
+			],
+			[
+				"perc",
+				"perc_75_price"
+			],
+			[
+				"perc_",
+				"perc_25_price"
+			],
+			[
+				"av",
+				"avg_price"
+			],
+			[
+				"var_",
+				"var_quantity"
+			],
+			[
+				"mean",
+				"mean_quantity"
+			],
+			[
+				"series",
+				"series_lag"
+			],
+			[
+				"field",
+				"field_inspection"
+			],
+			[
+				"gam_price_over_",
+				"gam_price_over_2d_s_price"
+			],
+			[
+				"summar",
+				"summary_over_gamma"
+			],
+			[
+				"summary",
+				"summary_comp_under"
+			],
+			[
+				"smooth",
+				"smooth_price_2"
+			],
+			[
+				"statfjord",
+				"statfjord_plot"
+			],
+			[
+				"size",
+				"size_vs_init_prod"
+			],
+			[
+				"reco",
+				"recoverable_oil"
+			],
+			[
+				"invest_per_prd",
+				"invest_per_prod_l5"
+			],
+			[
+				"real",
+				"oil_price_real"
+			],
+			[
+				"fields",
+				"fields_p"
+			],
+			[
+				"res",
+				"res_fit_se"
+			],
+			[
+				"smooth_ben",
+				"smooth_bench_split"
+			],
+			[
+				"year",
+				"year_prod"
+			],
+			[
+				"min",
+				"min_time_to_peak"
+			],
+			[
+				"invest",
+				"investmentMillNOK_real"
+			],
+			[
+				"fitted",
+				"fitted_year_prod"
+			],
+			[
+				"time",
+				"time_to_peak"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "power_plants.py",
+			"settings":
+			{
+				"buffer_size": 7714,
+				"line_ending": "Unix",
+				"name": "power_plants.py"
+			}
+		},
+		{
+			"contents": "data_notes.txt\n\nFrom EIA form 860 \n1990 - 2013\nhttp://www.eia.gov/electricity/data/eia860/\n\nFrom the 1994 Annual Energy Outlook document, produced by EIA.\n \n“Life extension is achieved by maintaining or improving the operating status of an electric power plant within acceptable levels of availability and efficiency, beyond the originally anticipated retirement date.”\n \n“Repowering is achieved by investments made in a plant to substantially increase the plant's generating capability, to change generating fuels, or to install a more efficient generating technology at the plant site.”\n\nquestions?\n\nOP	Operating - in service (commercial operation) and producing some electricity. Includes peaking units that are run on an as needed (intermittent or seasonal) basis.\nSB	Standby/Backup - available for service but not normally used (has little or no generation during the year) for this reporting period.\nOS	Out of service – was not used for some or all of the reporting period and is NOT expected to be returned to service in the next calendar year.\nOA	Out of service – was not used for some or all of the reporting period but is expected to be returned to service in the next calendar year.\nRE	Retired - no longer in service and not expected to be returned to service.\n\nThe data items of interest are in columns AW-BD in the spreadsheet.\n \npuscap – planned uprate summer capacity\npuwcap – planned uprate winter capacity\npumn   - planned uprate month\npuyr   - planned uprate year\n \npdscap – planned derate summer capacity\npdwcap – planned derate winter capacity\npdmn   - planned derate month\npdyr   - planned derate year\n \nNotice that, of a total of approximately 454 thousand records, only a couple thousand have data for uprates.  Only 500ish have planned derates.\n\n	Description\nyear\n\n\nomod 	Other modification	\nuname	Utility name\npname	Plant name\nucode	utility code\nown		ownership status (J=joint, S=single)\npcode	plant code\ngcode	generator code\nnerc	nerc region\niso		independent system operator\nnode	node within iso\nnaics	North American Industry Classification System (NAICS) code that best describes the primary purpose of the reporting plant\nregst	regulatory status\nfcogen	Indicates of whether the plant has FERC qualifying facility cogenerator status\nfsmall	Indicates of whether the plant has FERC qualifying facility small power producer status\nfewg	Indicates of whether the plant has FERC qualifying facility exempt wholesale generator status\nstate	state in which plant is located\nzip	zip (postal) code\ncounty	county in which plant is located\nsect	Plant-level sector number, designated by the primary purpose, regulatory status and plant-level combined heat and power status\npm	prime mover, e.g., \n	steam turbine, gas turbine, internal combustion engine, etc.\nstatus	status of generator\nnplate	nameplate capacity of generator\nscap	summer capacity rating of generator (MW = megawatts)\nwcap	winter capacity rating of generator (MW = megawatts)\nhr860	plant heat rate (efficiency measure) as reported in EIA860\nfswitch1	fuel switching capability\nmulti	\ndpgrid	\ninmn	in-service month\ninyr	in-service year\nrtmn	retirement month\nrtyr	retirement year\n\nprtmn	planned retirement month\nprtyr	planned retirement year\nefmn	The original effective month on which the generator was scheduled to start operation\n\nefyr	The original effective year on which the generator was scheduled to start operation\n\ncumn	The most recently updated effective month on which the generator is scheduled to start operation\n\ncuyr	The most recently updated effective year on which the generator is scheduled to start operation\n\nnrg1-6	fuel type 1-6\n\nmfuel	\nown	ownership status (J=joint, S=single)\nnumwind	\n\npmod	planned modifications\npuscap	planned uprate summer capacity\npuwcap	planned uprate winter capacity\npumn	planned uprate month\npuyr	planned uprate year\npdscap	planned derate summer capacity\npdwcap	planned derate winter capacity\npdmn	planned derate month\npdyr	planned derate year\npnewpm	planned new prime mover\npnrg1-6	planned fuel type 1-6\npstatus	planned status\nprpmn	planned repower month\nprpyr	planned repower year\npfcmn	\npfcyr	\n\nomod	other modifications\nomodmn	other mod month\nomodyr	other mod year\n\nsfg		Is generator part of a solid fuel gasifications system \npulcoal	Indicates whether the generator uses pulverized coal technology\n\nfbed	Indicates whether the generator uses fluidized bed technology\n	\n",
+			"file": "data_notes.txt",
+			"file_size": 4409,
+			"file_write_time": 1442233992000000,
+			"settings":
+			{
+				"buffer_size": 4391,
+				"line_ending": "Unix",
+				"name": "data_notes.txt"
+			}
+		},
+		{
+			"contents": "#other_data.py\n\n\nimport pandas as pd\nimport numpy as np\nimport matplotlib as mpt\nimport matplotlib.pyplot as plt\nimport matplotlib.patches as mpatches\nimport seaborn as sns\nimport statsmodels.formula.api as smf\nimport statsmodels.api as sm\nimport sys\nimport pystan\nimport scipy\n\npd.options.display.max_rows = 999\npd.options.display.max_columns = 100\n\n\n",
+			"file": "other_data.py",
+			"file_size": 655,
+			"file_write_time": 1440409566000000,
+			"settings":
+			{
+				"buffer_size": 352,
+				"line_ending": "Unix",
+				"name": "other_data.py"
+			}
+		},
+		{
+			"contents": "notes.txt\n\nLooks like I want to use nplate to see if they actually did upgrade the plant\n\nUpgrading of technology - as a byproduct increase capacity\n-scap seems to \n\nAre these environmental additions\nsfg: solid fuel gasifications\nfbed: flued bed technology\npulcoal: \n\nTrade-off between higher capacity/efficiency and environmental effectiveness. \n\nSearch term: Global Warming\n\n\n1.)One idea - use google searches/twitter with keywords \"climate\" etc to signify uncertainty about regulation - see if that has an affect on coal power plants and upgrades - especially decision to expand or shut-down (see note 3). \n-could be a type of poisson regression (events per time period)  \n\n2.) What about local factors and political uncertainty: can we look at swing counties and see how elections that swung one direction or the other (republican or democrat) and how that affected power plant investments, upgrades, etc. \n\n3.) Survival model of plant shutdowns - and various risk factors in place for this. (Sort of like my wind turbine study.) Also possible to expand this to re-starts (any of these).\n\n4.)Combination of 2 and 3 - look at neighboring states/counties with power plants near border and in same electricity market (pjm?) but with different state regulations. Could do diff-in-diff type identification strategy. \n\n5.)\"Beyond Coal\" campaign - Sierra Club, Bloomberg, and Natural Gas producers. Adds uncertainty. Are they active in some states\n\n",
+			"file": "notes.txt",
+			"file_size": 1399,
+			"file_write_time": 1442402491000000,
+			"settings":
+			{
+				"buffer_size": 1446,
+				"line_ending": "Unix",
+				"name": "notes.txt"
+			}
+		},
+		{
+			"file": "power_plants.r",
+			"settings":
+			{
+				"buffer_size": 14,
+				"line_ending": "Unix",
+				"name": "power_plants.r"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 279.0,
+		"selected_items":
+		[
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"p",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"latex",
+				"LaTeXTools: View PDF"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Discover Packages"
+			],
+			[
+				"ife",
+				"Snippet: Ifelse"
+			],
+			[
+				"snippet ife",
+				"Snippet: Ifelse"
+			],
+			[
+				"snippetife",
+				"Snippet: Ifelse"
+			],
+			[
+				"snippet",
+				"Snippet: Length"
+			],
+			[
+				"sn",
+				"Snippet: For Loop"
+			],
+			[
+				"package Control: Install",
+				"Package Control: Install Package"
+			],
+			[
+				"package Control: List ",
+				"Package Control: List Packages"
+			],
+			[
+				"PACKAGE CONTROL: INSTALL",
+				"Package Control: Install Package"
+			],
+			[
+				"Package",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/johannesmauritzen/research/power_plants/master_ro_1990_2013.txt",
+		"/Users/johannesmauritzen/Google Drive/Research/rOil/ej_RR/modeling.py",
+		"/Users/johannesmauritzen/Google Drive/Research/rOil/oil_modeling_prep.r",
+		"/Users/johannesmauritzen/Google Drive/Research/rOil/ej_RR/oil_pres_new.tex",
+		"/Users/johannesmauritzen/Google Drive/Research/rOil/ej_RR/oil_prices_old.tex",
+		"/Users/johannesmauritzen/Google Drive/Research/rOil/presentations/oil_geilo_2014.tex",
+		"/Users/johannesmauritzen/Google Drive/Research/rOil/ej_RR/thomasnotes.txt",
+		"/Users/johannesmauritzen/Google Drive/Research/rOil/presentations/oil_prices.pdf",
+		"/Users/johannesmauritzen/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/presentations/NYIAEE_Mauritzen.tex",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/presentations/oil_geilo_2014.tex",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/presentations/oil_prices_old.tex",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/simulation.tex",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/presentations/simulation_text.pdf",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/simulation.Snw.tex",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/simulation.Snw",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/oil_clean.R",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/oil_forecasting.r",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/price_modeling.R",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/presentations/oil_prices.tex",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/presentations/oil_pres_fibe_jan2014.tex",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/oil_modeling_prep.r",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/presentations/oil_prices.bib",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/oil_prices.bib",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/oil_descriptives.R",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/price_modeling_alt.r",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/oil_todo.txt",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/oil_modeling_eko.r",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/Oil_spatial.R",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/oil_temp.r",
+		"/Users/johannesmauritzen/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/presentations/apa_example.tex",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/presentations/oil_pres_fibe_jan2014.txt",
+		"/Users/johannesmauritzen/Google Drive/price-spikes/r-price-spikes/AnalysisMay2013.R",
+		"/Users/johannesmauritzen/Google Drive/price-spikes/AnalysisMay2013.R",
+		"/Users/johannesmauritzen/Google Drive/price-spikes/priceSpikeAnalysis.R",
+		"/Users/johannesmauritzen/Google Drive/elbas_efficiency/elbas_ACD.r",
+		"/Users/johannesmauritzen/Google Drive/marketPower/marketPowerSeptember2013.r",
+		"/Users/johannesmauritzen/Google Drive/marketPower/Analysis_may_2013.R",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/presentations/oil_pres_ifn.tex",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/presentations/oil_pres1.tex",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/presentations/oil_pres_ifn.txt",
+		"/Users/johannesmauritzen/Desktop/website_copy/jmaurit.github.io/index.html",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/presentation/oil_pres1.tex",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/oil.R",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/presentations/brownbag.txt",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/oil_pres1.tex",
+		"/Users/johannesmauritzen/Desktop/extract.r",
+		"/Users/johannesmauritzen/Google Drive/marketPower/cleaning.R",
+		"/Users/johannesmauritzen/Google Drive/github/state_space/statespace.r",
+		"/Users/johannesmauritzen/Google Drive/github/elec_wavelet/wavelet.r",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/reserve_forecasts.r",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/oil_modeling.R",
+		"/Users/johannesmauritzen/Google Drive/github/rOil/oil_bootstrap.r",
+		"/Users/johannesmauritzen/Google Drive/Oil/rOil/oil.R",
+		"/Users/johannesmauritzen/Google Drive/Oil/rOil/oil_modeling_prep",
+		"/Users/johannesmauritzen/Google Drive/Oil/rOil/#oil_modeling_prep.r",
+		"/Users/johannesmauritzen/Google Drive/website/jmaurit.github.io/index.html",
+		"/Users/johannesmauritzen/Google Drive/Oil/rOil/oil_clean.R",
+		"/Users/johannesmauritzen/Google Drive/marketPower/MarketPowerAugust2013.R",
+		"/Users/johannesmauritzen/Google Drive/Oil/rOil/oil_modeling.R",
+		"/Users/johannesmauritzen/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"prod_long",
+			"$",
+			"oil_price",
+			"str",
+			"&=",
+			"()\n",
+			"̃",
+			"ˆ",
+			"̃",
+			"_",
+			"as",
+			"res=100",
+			"res=300",
+			"width=.8",
+			"width=1",
+			"\\end{multline}",
+			"\\begin{multline}",
+			")))\n",
+			"\\caption*{}",
+			"\\caption",
+			"\\textwidth]{",
+			"[h]",
+			"over",
+			"under",
+			"1",
+			"under",
+			"_",
+			"nirupama_s._rao",
+			"_",
+			"\\_",
+			"multiline",
+			"percent",
+			"\\_",
+			"mohn		",
+			"fields_p",
+			"time_to_peak",
+			"build_out",
+			"postpeak",
+			"gam_price_short",
+			"gam_price_chart",
+			"chart_over_short",
+			"chart_under_short",
+			"gam_price_over_2d_short",
+			"gam_price_under_2d_short",
+			"fields_p",
+			"gam_price_pooled",
+			"chart_pooled",
+			"8",
+			"oil_price_real_l2",
+			"max_prod",
+			"large_field",
+			"pos_price",
+			"pos_dif",
+			"fields",
+			"vinterdekk",
+			">vinterdekk\n",
+			">\n",
+			"/Users/johannesmauritzen/Google Drive/oil/figures/",
+			"fields_p"
+		],
+		"highlight": true,
+		"in_selection": true,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"prod_wide",
+			"",
+			"oil_price_real",
+			"^",
+			"~",
+			"\\_",
+			"res=50",
+			"res=100",
+			"width=1",
+			"width=.8",
+			"\\end{equation}",
+			"\\begin{equation}",
+			"",
+			"\\caption*",
+			"\\textwidth]{figures/",
+			"",
+			"under",
+			"over",
+			"2",
+			"over",
+			"",
+			"rao",
+			"",
+			"multline",
+			"\\%",
+			"",
+			"fields_old",
+			"peak_to_end",
+			"decline",
+			"prepeak",
+			"gam_postpeak",
+			"gam_postpeak_chart",
+			"chart_postpeak_large",
+			"chart_postpeak_small",
+			"gam_postpeak_large",
+			"gam_postpeak_small",
+			"fields_old",
+			"invest_pooled",
+			"chart_invest",
+			"short",
+			"large_field",
+			"max_prod",
+			"after_peak",
+			"neg_price",
+			"neg_dif",
+			"oil_long",
+			"varmeovn",
+			"/Users/johannesmauritzen/Google Drive/github/rOil/presentations/",
+			"fields_eko"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "power_plants.py",
+					"settings":
+					{
+						"buffer_size": 7714,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3823,
+								3733
+							]
+						],
+						"settings":
+						{
+							"auto_name": "power_plants.py",
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4228.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "data_notes.txt",
+					"settings":
+					{
+						"buffer_size": 4391,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4001,
+								3994
+							]
+						],
+						"settings":
+						{
+							"auto_name": "data_notes.txt",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2964.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "other_data.py",
+					"settings":
+					{
+						"buffer_size": 352,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14,
+								14
+							]
+						],
+						"settings":
+						{
+							"auto_name": "other_data.py",
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "notes.txt",
+					"settings":
+					{
+						"buffer_size": 1446,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								266,
+								266
+							]
+						],
+						"settings":
+						{
+							"auto_name": "notes.txt",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "power_plants.r",
+					"settings":
+					{
+						"buffer_size": 14,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14,
+								14
+							]
+						],
+						"settings":
+						{
+							"auto_name": "power_plants.r",
+							"syntax": "Packages/R/R.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 210.0
+	},
+	"output.latex_log":
+	{
+		"height": 203.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 261.0,
+	"status_bar_visible": true
+}
