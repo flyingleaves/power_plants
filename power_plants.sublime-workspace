@@ -159,54 +159,99 @@
 			"file": "power_plants.py",
 			"settings":
 			{
-				"buffer_size": 7714,
+				"buffer_size": 8180,
 				"line_ending": "Unix",
 				"name": "power_plants.py"
 			}
 		},
 		{
-			"contents": "data_notes.txt\n\nFrom EIA form 860 \n1990 - 2013\nhttp://www.eia.gov/electricity/data/eia860/\n\nFrom the 1994 Annual Energy Outlook document, produced by EIA.\n \n“Life extension is achieved by maintaining or improving the operating status of an electric power plant within acceptable levels of availability and efficiency, beyond the originally anticipated retirement date.”\n \n“Repowering is achieved by investments made in a plant to substantially increase the plant's generating capability, to change generating fuels, or to install a more efficient generating technology at the plant site.”\n\nquestions?\n\nOP	Operating - in service (commercial operation) and producing some electricity. Includes peaking units that are run on an as needed (intermittent or seasonal) basis.\nSB	Standby/Backup - available for service but not normally used (has little or no generation during the year) for this reporting period.\nOS	Out of service – was not used for some or all of the reporting period and is NOT expected to be returned to service in the next calendar year.\nOA	Out of service – was not used for some or all of the reporting period but is expected to be returned to service in the next calendar year.\nRE	Retired - no longer in service and not expected to be returned to service.\n\nThe data items of interest are in columns AW-BD in the spreadsheet.\n \npuscap – planned uprate summer capacity\npuwcap – planned uprate winter capacity\npumn   - planned uprate month\npuyr   - planned uprate year\n \npdscap – planned derate summer capacity\npdwcap – planned derate winter capacity\npdmn   - planned derate month\npdyr   - planned derate year\n \nNotice that, of a total of approximately 454 thousand records, only a couple thousand have data for uprates.  Only 500ish have planned derates.\n\n	Description\nyear\n\n\nomod 	Other modification	\nuname	Utility name\npname	Plant name\nucode	utility code\nown		ownership status (J=joint, S=single)\npcode	plant code\ngcode	generator code\nnerc	nerc region\niso		independent system operator\nnode	node within iso\nnaics	North American Industry Classification System (NAICS) code that best describes the primary purpose of the reporting plant\nregst	regulatory status\nfcogen	Indicates of whether the plant has FERC qualifying facility cogenerator status\nfsmall	Indicates of whether the plant has FERC qualifying facility small power producer status\nfewg	Indicates of whether the plant has FERC qualifying facility exempt wholesale generator status\nstate	state in which plant is located\nzip	zip (postal) code\ncounty	county in which plant is located\nsect	Plant-level sector number, designated by the primary purpose, regulatory status and plant-level combined heat and power status\npm	prime mover, e.g., \n	steam turbine, gas turbine, internal combustion engine, etc.\nstatus	status of generator\nnplate	nameplate capacity of generator\nscap	summer capacity rating of generator (MW = megawatts)\nwcap	winter capacity rating of generator (MW = megawatts)\nhr860	plant heat rate (efficiency measure) as reported in EIA860\nfswitch1	fuel switching capability\nmulti	\ndpgrid	\ninmn	in-service month\ninyr	in-service year\nrtmn	retirement month\nrtyr	retirement year\n\nprtmn	planned retirement month\nprtyr	planned retirement year\nefmn	The original effective month on which the generator was scheduled to start operation\n\nefyr	The original effective year on which the generator was scheduled to start operation\n\ncumn	The most recently updated effective month on which the generator is scheduled to start operation\n\ncuyr	The most recently updated effective year on which the generator is scheduled to start operation\n\nnrg1-6	fuel type 1-6\n\nmfuel	\nown	ownership status (J=joint, S=single)\nnumwind	\n\npmod	planned modifications\npuscap	planned uprate summer capacity\npuwcap	planned uprate winter capacity\npumn	planned uprate month\npuyr	planned uprate year\npdscap	planned derate summer capacity\npdwcap	planned derate winter capacity\npdmn	planned derate month\npdyr	planned derate year\npnewpm	planned new prime mover\npnrg1-6	planned fuel type 1-6\npstatus	planned status\nprpmn	planned repower month\nprpyr	planned repower year\npfcmn	\npfcyr	\n\nomod	other modifications\nomodmn	other mod month\nomodyr	other mod year\n\nsfg		Is generator part of a solid fuel gasifications system \npulcoal	Indicates whether the generator uses pulverized coal technology\n\nfbed	Indicates whether the generator uses fluidized bed technology\n	\n",
-			"file": "data_notes.txt",
-			"file_size": 4409,
-			"file_write_time": 1442233992000000,
+			"file": "uprates.tex",
 			"settings":
 			{
-				"buffer_size": 4391,
+				"buffer_size": 999,
+				"line_ending": "Unix",
+				"name": "uprates.tex"
+			}
+		},
+		{
+			"file": "plants_clean.py",
+			"settings":
+			{
+				"buffer_size": 6130,
+				"line_ending": "Unix",
+				"name": "hyro_plants.py"
+			}
+		},
+		{
+			"file": "commands.txt",
+			"settings":
+			{
+				"buffer_size": 109,
+				"line_ending": "Unix",
+				"name": "commands.txt"
+			}
+		},
+		{
+			"file": "wind_descriptives.py",
+			"settings":
+			{
+				"buffer_size": 1917,
+				"line_ending": "Unix",
+				"name": "wind_descriptives.py"
+			}
+		},
+		{
+			"file": "hydro_descriptives.py",
+			"settings":
+			{
+				"buffer_size": 5662,
+				"line_ending": "Unix",
+				"name": "hydro_descriptives.py"
+			}
+		},
+		{
+			"file": "hydro_analysis.py",
+			"settings":
+			{
+				"buffer_size": 586,
+				"line_ending": "Unix",
+				"name": "hydro_analysis.py"
+			}
+		},
+		{
+			"file": "map_test.py",
+			"settings":
+			{
+				"buffer_size": 1146,
+				"line_ending": "Unix",
+				"name": "map_test.py"
+			}
+		},
+		{
+			"file": "storage.py",
+			"settings":
+			{
+				"buffer_size": 1948,
+				"line_ending": "Unix",
+				"name": "storage.py"
+			}
+		},
+		{
+			"file": "data_notes.txt",
+			"settings":
+			{
+				"buffer_size": 4890,
 				"line_ending": "Unix",
 				"name": "data_notes.txt"
 			}
 		},
 		{
-			"contents": "#other_data.py\n\n\nimport pandas as pd\nimport numpy as np\nimport matplotlib as mpt\nimport matplotlib.pyplot as plt\nimport matplotlib.patches as mpatches\nimport seaborn as sns\nimport statsmodels.formula.api as smf\nimport statsmodels.api as sm\nimport sys\nimport pystan\nimport scipy\n\npd.options.display.max_rows = 999\npd.options.display.max_columns = 100\n\n\n",
-			"file": "other_data.py",
-			"file_size": 655,
-			"file_write_time": 1440409566000000,
-			"settings":
-			{
-				"buffer_size": 352,
-				"line_ending": "Unix",
-				"name": "other_data.py"
-			}
-		},
-		{
-			"contents": "notes.txt\n\nLooks like I want to use nplate to see if they actually did upgrade the plant\n\nUpgrading of technology - as a byproduct increase capacity\n-scap seems to \n\nAre these environmental additions\nsfg: solid fuel gasifications\nfbed: flued bed technology\npulcoal: \n\nTrade-off between higher capacity/efficiency and environmental effectiveness. \n\nSearch term: Global Warming\n\n\n1.)One idea - use google searches/twitter with keywords \"climate\" etc to signify uncertainty about regulation - see if that has an affect on coal power plants and upgrades - especially decision to expand or shut-down (see note 3). \n-could be a type of poisson regression (events per time period)  \n\n2.) What about local factors and political uncertainty: can we look at swing counties and see how elections that swung one direction or the other (republican or democrat) and how that affected power plant investments, upgrades, etc. \n\n3.) Survival model of plant shutdowns - and various risk factors in place for this. (Sort of like my wind turbine study.) Also possible to expand this to re-starts (any of these).\n\n4.)Combination of 2 and 3 - look at neighboring states/counties with power plants near border and in same electricity market (pjm?) but with different state regulations. Could do diff-in-diff type identification strategy. \n\n5.)\"Beyond Coal\" campaign - Sierra Club, Bloomberg, and Natural Gas producers. Adds uncertainty. Are they active in some states\n\n",
 			"file": "notes.txt",
-			"file_size": 1399,
-			"file_write_time": 1442402491000000,
 			"settings":
 			{
-				"buffer_size": 1446,
+				"buffer_size": 1658,
 				"line_ending": "Unix",
 				"name": "notes.txt"
-			}
-		},
-		{
-			"file": "power_plants.r",
-			"settings":
-			{
-				"buffer_size": 14,
-				"line_ending": "Unix",
-				"name": "power_plants.r"
 			}
 		}
 	],
@@ -294,6 +339,9 @@
 	},
 	"file_history":
 	[
+		"/Users/johannesmauritzen/research/power_plants/other_data.py",
+		"/Users/johannesmauritzen/research/power_plants/wind.py",
+		"/Users/johannesmauritzen/research/power_plants/power_plants.r",
 		"/Users/johannesmauritzen/research/power_plants/master_ro_1990_2013.txt",
 		"/Users/johannesmauritzen/Google Drive/Research/rOil/ej_RR/modeling.py",
 		"/Users/johannesmauritzen/Google Drive/Research/rOil/oil_modeling_prep.r",
@@ -373,6 +421,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"wind_turbines",
+			"prime_mover",
 			"prod_long",
 			"$",
 			"oil_price",
@@ -434,11 +484,12 @@
 			"fields_p"
 		],
 		"highlight": true,
-		"in_selection": true,
+		"in_selection": false,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			"upgrade_year",
 			"prod_wide",
 			"",
 			"oil_price_real",
@@ -498,7 +549,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -506,15 +557,15 @@
 					"file": "power_plants.py",
 					"settings":
 					{
-						"buffer_size": 7714,
+						"buffer_size": 8180,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3823,
-								3733
+								7741,
+								7741
 							]
 						],
 						"settings":
@@ -524,58 +575,31 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 4228.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "data_notes.txt",
+					"file": "uprates.tex",
 					"settings":
 					{
-						"buffer_size": 4391,
+						"buffer_size": 999,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4001,
-								3994
+								625,
+								625
 							]
 						],
 						"settings":
 						{
-							"auto_name": "data_notes.txt",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 2964.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "other_data.py",
-					"settings":
-					{
-						"buffer_size": 352,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								14,
-								14
-							]
-						],
-						"settings":
-						{
-							"auto_name": "other_data.py",
-							"syntax": "Packages/Python/Python.tmLanguage"
+							"auto_name": "uprates.tex",
+							"syntax": "Packages/LaTeXing/support/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -584,24 +608,52 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "notes.txt",
+					"buffer": 2,
+					"file": "plants_clean.py",
 					"settings":
 					{
-						"buffer_size": 1446,
+						"buffer_size": 6130,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								266,
-								266
+								4426,
+								4600
 							]
 						],
 						"settings":
 						{
-							"auto_name": "notes.txt",
+							"auto_name": "hyro_plants.py",
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3588.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "commands.txt",
+					"settings":
+					{
+						"buffer_size": 109,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								108,
+								108
+							]
+						],
+						"settings":
+						{
+							"auto_name": "commands.txt",
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -612,24 +664,186 @@
 				},
 				{
 					"buffer": 4,
-					"file": "power_plants.r",
+					"file": "wind_descriptives.py",
 					"settings":
 					{
-						"buffer_size": 14,
+						"buffer_size": 1917,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								14,
-								14
+								1915,
+								1915
 							]
 						],
 						"settings":
 						{
-							"auto_name": "power_plants.r",
-							"syntax": "Packages/R/R.tmLanguage"
+							"auto_name": "wind_descriptives.py",
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "hydro_descriptives.py",
+					"settings":
+					{
+						"buffer_size": 5662,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5660,
+								5660
+							]
+						],
+						"settings":
+						{
+							"auto_name": "hydro_descriptives.py",
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 5212.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "hydro_analysis.py",
+					"settings":
+					{
+						"buffer_size": 586,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								409,
+								409
+							]
+						],
+						"settings":
+						{
+							"auto_name": "hydro_analysis.py",
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 23.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "map_test.py",
+					"settings":
+					{
+						"buffer_size": 1146,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								133,
+								133
+							]
+						],
+						"settings":
+						{
+							"auto_name": "map_test.py",
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "storage.py",
+					"settings":
+					{
+						"buffer_size": 1948,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								460,
+								460
+							]
+						],
+						"settings":
+						{
+							"auto_name": "storage.py",
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "data_notes.txt",
+					"settings":
+					{
+						"buffer_size": 4890,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								326,
+								326
+							]
+						],
+						"settings":
+						{
+							"auto_name": "data_notes.txt",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "notes.txt",
+					"settings":
+					{
+						"buffer_size": 1658,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								40,
+								40
+							]
+						],
+						"settings":
+						{
+							"auto_name": "notes.txt",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -681,7 +895,7 @@
 	},
 	"replace":
 	{
-		"height": 64.0
+		"height": 104.0
 	},
 	"save_all_on_build": true,
 	"select_file":

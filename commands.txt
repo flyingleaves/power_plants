@@ -1,0 +1,5 @@
+commands.txt
+
+layout
+open /Users/johannesmauritzen/research/power_plants_data/eia8602014er/LayoutY2014_Data_Early_Release.xlsx
+

@@ -1,4 +1,23 @@
-data_notes.txt
+
+#pmod - planned modification
+#pm - prime mover
+#prpyr - planned repower yr
+#pstatus - planned status
+#pnewpm - planned new prime mover
+#pdscap - planned derate summer capacity
+#pdyr - planned derate year
+#efyr - effective year - planned effective year to be operating
+#cuyr - currently planned effective year to be operating
+
+
+year uprate or derate complted during year:  In the raw data from EIA, variable for the year a derate was completed
+
+
+Run-of-river plants seem to be missing from the data
+nrg1 == CUR
+
+
+
 
 From EIA form 860 
 1990 - 2013
@@ -55,7 +74,8 @@ state	state in which plant is located
 zip	zip (postal) code
 county	county in which plant is located
 sect	Plant-level sector number, designated by the primary purpose, regulatory status and plant-level combined heat and power status
-pm	prime mover, e.g., steam turbine, gas turbine, internal combustion engine, etc.
+pm	prime mover, e.g., 
+	steam turbine, gas turbine, internal combustion engine, etc.
 status	status of generator
 nplate	nameplate capacity of generator
 scap	summer capacity rating of generator (MW = megawatts)

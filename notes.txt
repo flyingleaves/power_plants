@@ -1,16 +1,38 @@
-notes.txt
+Diff-in-Diff with same balancing authorities but in different states. 
+Can we see when they instituted a renewable energy policy.
+
+
+Renewable portfolio standards
+
+-some variables in 2014 dataset that I would like to use:
+	-uprate completed
+	-balancing area
+
+-like to put together a new dataset
+
+concern - there appear to more uprates in the new data 2014
+
+
+Questions:
+	-Is every year variable that shows planned uprate included in the regression
+
+
+renewable porfolio standards
+http://www.ncsl.org/research/energy/renewable-portfolio-standards.aspx
 
 Looks like I want to use nplate to see if they actually did upgrade the plant
 
 Upgrading of technology - as a byproduct increase capacity
 -scap seems to 
 
-Are these environmental 
+Are these environmental additions
 sfg: solid fuel gasifications
 fbed: flued bed technology
+pulcoal: 
 
 Trade-off between higher capacity/efficiency and environmental effectiveness. 
 
+Search term: Global Warming
 
 
 1.)One idea - use google searches/twitter with keywords "climate" etc to signify uncertainty about regulation - see if that has an affect on coal power plants and upgrades - especially decision to expand or shut-down (see note 3). 
