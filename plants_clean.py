@@ -145,15 +145,17 @@ hy_names = ['utility_id',
 hydro2014.columns = hy_names
 hydro2014.to_csv("/Users/johannesmauritzen/research/power_plants_data/hydro2014.csv")
 
-complete_year =  generators2014[["gen_id", "Year Uprate or Derate Completed", "Latitude", "Longitude"]]
+complete_year = generators2014[["gen_id", "Year Uprate or Derate Completed", "Latitude", "Longitude"]]
 complete_year.columns = ["gen_id", "year_uprate_complete", "lat", "lon"]
 power_plants = power_plants.merge(complete_year, on="gen_id", how="left")
+
 
 include = ['gen_id', 'year','inyr','ucode', 'status', 'rtyr', 'prtyr' , 'nerc', 
 'iso', 'node', 'naics', 'nplate','scap', 'wcap', 'state',
  'zip', 'county', 'cogen', 'nrg1', 'puyr', 
  'puscap', 'pm', 'pmod', 'omod', 'omodyr', 'pstatus', 'prpyr', 
  'pdscap', 'pdyr', 'efyr', 'cuyr', 'year_uprate_complete', 'lon', 'lat']
+
 
 hydro = ["WAT", "CUR"]
 #limit to hydro power
@@ -176,21 +178,37 @@ solar_plants2014 = generators2014[generators2014["Energy Source 1"]=="SUN"]
 
 #energy_sources = generators2014.groupby("Energy Source 1")["gen_id"].aggregate(len)
 
-wind_include = ["Utility ID", "Utility Name", "Plant Code", "State", "County", "Generator ID", "Nameplate Capacity (MW)", "Minimum Load (MW)", "Operating Month", "Operating Year", "Turbines, Inverters, or Hydrokinetic Buoys", "gen_id"]
+wind_include = ["Utility ID", "Utility Name", "Plant Code", 
+"State", "County", "Generator ID", "Nameplate Capacity (MW)",
+ "Minimum Load (MW)", "Operating Month", "Operating Year",
+  "Turbines, Inverters, or Hydrokinetic Buoys", "gen_id"]
 
 wind_turb2014 = wind_turb2014[wind_include]
 solar_plants2014 = solar_plants2014[wind_include]
 
-wind_data = wind_turb2014.merge(plants2014[["Plant Code", "Zip", "Latitude", "Longitude"]], on = ["Plant Code"], how= "left")
-solar_data = solar_plants2014.merge(plants2014[["Plant Code", "Zip", "Latitude", "Longitude"]], on = ["Plant Code"], how = "left")
+wind_data = wind_turb2014.merge(plants2014[["Plant Code", "Zip", "Latitude", "Longitude",
+       "Balancing Authority Code",
+       "Balancing Authority Name",
+       "Transmission or Distribution System Owner ID",
+  "Transmission or Distribution System Owner"]], 
+  on = ["Plant Code"], how= "left")
+
+solar_data = solar_plants2014.merge(plants2014[["Plant Code", "Zip", "Latitude", "Longitude",  
+ "Balancing Authority Code",
+ "Balancing Authority Name",
+ "Transmission or Distribution System Owner ID",
+  "Transmission or Distribution System Owner"]], 
+  on = ["Plant Code"], how = "left")
 
 wind_data.columns = ["utility_id", "utility_name", "plant_code", 
 "state", "county", "generator_id", "nplate", "min_load", 
-"op_month", "op_year",  "num_turbs","gen_id","zip", "lat", "lon"]
+"op_month", "op_year",  "num_turbs","gen_id","zip", "lat", "lon",
+ "bal_auth_code", "bal_auth_name", "trans_owner_id", "trans_owner"]
 
 solar_data.columns = ["utility_id", "utility_name", "plant_code", 
 "state", "county", "generator_id","nplate", "min_load", 
-"op_month", "op_year",  "num_turbs","gen_id","zip", "lat", "lon"]
+"op_month", "op_year",  "num_turbs","gen_id","zip", "lat", "lon",
+ "bal_auth_code", "bal_auth_name", "trans_owner_id", "trans_owner"]
 
 wind_data["zip"] = wind_data.zip.apply(zip0)
 solar_data["zip"] = wind_data.zip.apply(zip0)

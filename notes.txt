@@ -1,3 +1,10 @@
+
+Issue - do you use total wind power, or planned wind power
+	  - could do both. 
+
+	  
+
+
 Diff-in-Diff with same balancing authorities but in different states. 
 Can we see when they instituted a renewable energy policy.
 

@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"op",
+				"op_year"
+			],
+			[
+				"hydro",
+				"hydro_2012_2014"
+			],
+			[
 				"sd",
 				"sd_prod_index"
 			],
@@ -177,16 +185,34 @@
 			"file": "plants_clean.py",
 			"settings":
 			{
-				"buffer_size": 6130,
+				"buffer_size": 8923,
 				"line_ending": "Unix",
 				"name": "hyro_plants.py"
+			}
+		},
+		{
+			"file": "new_data_clean.py",
+			"settings":
+			{
+				"buffer_size": 10469,
+				"line_ending": "Unix",
+				"name": "new_data_clean.py"
+			}
+		},
+		{
+			"file": "new_analysis.r",
+			"settings":
+			{
+				"buffer_size": 304,
+				"line_ending": "Unix",
+				"name": "new_analysis.r"
 			}
 		},
 		{
 			"file": "commands.txt",
 			"settings":
 			{
-				"buffer_size": 109,
+				"buffer_size": 128,
 				"line_ending": "Unix",
 				"name": "commands.txt"
 			}
@@ -213,7 +239,7 @@
 			"file": "hydro_analysis.py",
 			"settings":
 			{
-				"buffer_size": 586,
+				"buffer_size": 1615,
 				"line_ending": "Unix",
 				"name": "hydro_analysis.py"
 			}
@@ -222,7 +248,7 @@
 			"file": "map_test.py",
 			"settings":
 			{
-				"buffer_size": 1146,
+				"buffer_size": 4283,
 				"line_ending": "Unix",
 				"name": "map_test.py"
 			}
@@ -237,10 +263,13 @@
 			}
 		},
 		{
+			"contents": "\n#pmod - planned modification\n#pm - prime mover\n#prpyr - planned repower yr\n#pstatus - planned status\n#pnewpm - planned new prime mover\n#pdscap - planned derate summer capacity\n#pdyr - planned derate year\n#efyr - effective year - planned effective year to be operating\n#cuyr - currently planned effective year to be operating\n\n\nyear uprate or derate completed during year:  In the raw data from EIA, variable for the year a derate was completed\n\n\nRun-of-river plants seem to be missing from the data\nnrg1 == CUR\n\n\n\n\nFrom EIA form 860 \n1990 - 2013\nhttp://www.eia.gov/electricity/data/eia860/\n\nFrom the 1994 Annual Energy Outlook document, produced by EIA.\n \n“Life extension is achieved by maintaining or improving the operating status of an electric power plant within acceptable levels of availability and efficiency, beyond the originally anticipated retirement date.”\n \n“Repowering is achieved by investments made in a plant to substantially increase the plant's generating capability, to change generating fuels, or to install a more efficient generating technology at the plant site.”\n\nquestions?\n\nOP	Operating - in service (commercial operation) and producing some electricity. Includes peaking units that are run on an as needed (intermittent or seasonal) basis.\nSB	Standby/Backup - available for service but not normally used (has little or no generation during the year) for this reporting period.\nOS	Out of service – was not used for some or all of the reporting period and is NOT expected to be returned to service in the next calendar year.\nOA	Out of service – was not used for some or all of the reporting period but is expected to be returned to service in the next calendar year.\nRE	Retired - no longer in service and not expected to be returned to service.\n\nThe data items of interest are in columns AW-BD in the spreadsheet.\n \npuscap – planned uprate summer capacity\npuwcap – planned uprate winter capacity\npumn   - planned uprate month\npuyr   - planned uprate year\n \npdscap – planned derate summer capacity\npdwcap – planned derate winter capacity\npdmn   - planned derate month\npdyr   - planned derate year\n \nNotice that, of a total of approximately 454 thousand records, only a couple thousand have data for uprates.  Only 500ish have planned derates.\n\n	Description\nyear\n\n\nomod 	Other modification	\nuname	Utility name\npname	Plant name\nucode	utility code\nown		ownership status (J=joint, S=single)\npcode	plant code\ngcode	generator code\nnerc	nerc region\niso		independent system operator\nnode	node within iso\nnaics	North American Industry Classification System (NAICS) code that best describes the primary purpose of the reporting plant\nregst	regulatory status\nfcogen	Indicates of whether the plant has FERC qualifying facility cogenerator status\nfsmall	Indicates of whether the plant has FERC qualifying facility small power producer status\nfewg	Indicates of whether the plant has FERC qualifying facility exempt wholesale generator status\nstate	state in which plant is located\nzip	zip (postal) code\ncounty	county in which plant is located\nsect	Plant-level sector number, designated by the primary purpose, regulatory status and plant-level combined heat and power status\npm	prime mover, e.g., \n	steam turbine, gas turbine, internal combustion engine, etc.\nstatus	status of generator\nnplate	nameplate capacity of generator\nscap	summer capacity rating of generator (MW = megawatts)\nwcap	winter capacity rating of generator (MW = megawatts)\nhr860	plant heat rate (efficiency measure) as reported in EIA860\nfswitch1	fuel switching capability\nmulti	\ndpgrid	\ninmn	in-service month\ninyr	in-service year\nrtmn	retirement month\nrtyr	retirement year\n\nprtmn	planned retirement month\nprtyr	planned retirement year\nefmn	The original effective month on which the generator was scheduled to start operation\n\nefyr	The original effective year on which the generator was scheduled to start operation\n\ncumn	The most recently updated effective month on which the generator is scheduled to start operation\n\ncuyr	The most recently updated effective year on which the generator is scheduled to start operation\n\nnrg1-6	fuel type 1-6\n\nmfuel	\nown	ownership status (J=joint, S=single)\nnumwind	\n\npmod	planned modifications\npuscap	planned uprate summer capacity\npuwcap	planned uprate winter capacity\npumn	planned uprate month\npuyr	planned uprate year\npdscap	planned derate summer capacity\npdwcap	planned derate winter capacity\npdmn	planned derate month\npdyr	planned derate year\npnewpm	planned new prime mover\npnrg1-6	planned fuel type 1-6\npstatus	planned status\nprpmn	planned repower month\nprpyr	planned repower year\npfcmn	\npfcyr	\n\nomod	other modifications\nomodmn	other mod month\nomodyr	other mod year\n\nsfg		Is generator part of a solid fuel gasifications system \npulcoal	Indicates whether the generator uses pulverized coal technology\n\nfbed	Indicates whether the generator uses fluidized bed technology\n	\n",
 			"file": "data_notes.txt",
+			"file_size": 4910,
+			"file_write_time": 1446143350000000,
 			"settings":
 			{
-				"buffer_size": 4890,
+				"buffer_size": 4891,
 				"line_ending": "Unix",
 				"name": "data_notes.txt"
 			}
@@ -249,7 +278,7 @@
 			"file": "notes.txt",
 			"settings":
 			{
-				"buffer_size": 1658,
+				"buffer_size": 2072,
 				"line_ending": "Unix",
 				"name": "notes.txt"
 			}
@@ -421,6 +450,16 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"solar",
+			"year",
+			"solar",
+			"wind",
+			"2013",
+			"2013_2014",
+			"2012_2014",
+			"hydro2014",
+			"plants2014",
+			"generators2014",
 			"wind_turbines",
 			"prime_mover",
 			"prod_long",
@@ -484,11 +523,21 @@
 			"fields_p"
 		],
 		"highlight": true,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
 		"regex": false,
 		"replace_history":
 		[
+			"wind",
+			"report_year",
+			"wind",
+			"solar",
+			"2012",
+			"2012_2014",
+			"2013_2014",
+			"hydro",
+			"plant_data",
+			"gen_data",
 			"upgrade_year",
 			"prod_wide",
 			"",
@@ -549,7 +598,7 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -575,7 +624,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 4.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -592,8 +641,8 @@
 						"selection":
 						[
 							[
-								625,
-								625
+								391,
+								391
 							]
 						],
 						"settings":
@@ -612,43 +661,99 @@
 					"file": "plants_clean.py",
 					"settings":
 					{
-						"buffer_size": 6130,
+						"buffer_size": 8923,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4426,
-								4600
+								7219,
+								7393
 							]
 						],
 						"settings":
 						{
 							"auto_name": "hyro_plants.py",
 							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 7,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3588.0,
+						"translation.y": 7225.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "commands.txt",
+					"file": "new_data_clean.py",
 					"settings":
 					{
-						"buffer_size": 109,
+						"buffer_size": 10469,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								108,
-								108
+								10385,
+								10385
+							]
+						],
+						"settings":
+						{
+							"auto_name": "new_data_clean.py",
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 7904.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "new_analysis.r",
+					"settings":
+					{
+						"buffer_size": 304,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								76,
+								76
+							]
+						],
+						"settings":
+						{
+							"auto_name": "new_analysis.r",
+							"syntax": "Packages/R/R.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "commands.txt",
+					"settings":
+					{
+						"buffer_size": 128,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								127,
+								127
 							]
 						],
 						"settings":
@@ -663,7 +768,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 6,
 					"file": "wind_descriptives.py",
 					"settings":
 					{
@@ -690,7 +795,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 7,
 					"file": "hydro_descriptives.py",
 					"settings":
 					{
@@ -701,8 +806,8 @@
 						"selection":
 						[
 							[
-								5660,
-								5660
+								5618,
+								5618
 							]
 						],
 						"settings":
@@ -710,58 +815,31 @@
 							"auto_name": "hydro_descriptives.py",
 							"syntax": "Packages/Python/Python.tmLanguage"
 						},
-						"translation.x": 0.0,
-						"translation.y": 5212.0,
+						"translation.x": 10.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 8,
 					"file": "hydro_analysis.py",
 					"settings":
 					{
-						"buffer_size": 586,
+						"buffer_size": 1615,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								409,
-								409
+								862,
+								940
 							]
 						],
 						"settings":
 						{
 							"auto_name": "hydro_analysis.py",
-							"syntax": "Packages/Python/Python.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 23.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "map_test.py",
-					"settings":
-					{
-						"buffer_size": 1146,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								133,
-								133
-							]
-						],
-						"settings":
-						{
-							"auto_name": "map_test.py",
 							"syntax": "Packages/Python/Python.tmLanguage"
 						},
 						"translation.x": 0.0,
@@ -771,7 +849,36 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
+					"file": "map_test.py",
+					"settings":
+					{
+						"buffer_size": 4283,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3902,
+								3902
+							]
+						],
+						"settings":
+						{
+							"auto_name": "map_test.py",
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 6,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
 					"file": "storage.py",
 					"settings":
 					{
@@ -798,19 +905,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 9,
+					"buffer": 11,
 					"file": "data_notes.txt",
 					"settings":
 					{
-						"buffer_size": 4890,
+						"buffer_size": 4891,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								326,
-								326
+								356,
+								356
 							]
 						],
 						"settings":
@@ -825,19 +932,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 12,
 					"file": "notes.txt",
 					"settings":
 					{
-						"buffer_size": 1658,
+						"buffer_size": 2072,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								40,
-								40
+								85,
+								85
 							]
 						],
 						"settings":
